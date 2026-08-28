@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\usepackage[backend=biber,
+  maxbibnames=99,
+  natbib=true,
+  style=ext-numeric-comp,
+%  autocite=numeric, %superscript,
+  sortcites=true,
+  sorting=nyt]{biblatex}
+\DeclareFieldFormat % Titles in sentence case
+  [article,inbook,incollection,inproceedings,patent,thesis,unpublished]
+  {titlecase:title}{\MakeSentenceCase*{#1}}
+\renewbibmacro{in:}{ % Don't use "In:" before journal names.  
+  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+% date after authors
+\renewbibmacro*{date+extradate}{}
+\renewbibmacro*{issue+date}{}
+\renewbibmacro*{date+extradate}{%
+  \printtext[parens]{%
+    \printdate
+  }%
+}
+\renewbibmacro*{author}{%
+  \ifuseauthor
+    {\printnames{author}%
+     \setunit{\addspace}%
+     \usebibmacro{date+extradate}}
+    {}%
+}
+
+\addbibresource{defs.bib}
+\addbibresource{arr.bib}
+\addbibresource{molrec.bib}
+
+\renewcommand{\topfraction}{.9}
+\renewcommand{\bottomfraction}{.9}
+\renewcommand{\textfraction}{.1}
+\renewcommand{\floatpagefraction}{.8}
+\renewcommand{\dbltopfraction}{.9}
+\renewcommand{\dblfloatpagefraction}{.9}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{5}
+\setcounter{dbltopnumber}{2}
+\setcounter{secnumdepth}{0}
+\begin{document}
+\title{The Misapportionment of Human Diversity}
+\author{Alan R. Rogers}
+\maketitle
+
+Consider a set of $K$ loci, which segregate in two populations of
+equal size. At each locus there are two alleles, called ``plus'' and
+``minus'' for reasons explained below. The frequency of each plus
+allele is $p_1 = 1/2 + \delta$ in population~1, $p_2 = 1/2 - \delta$
+in population~2, and $1/2$ in the population as a whole.  The
+between-group component of variance in allele frequencies is $B = (p_1
+- 1/2)^2/2 + (p_2 - 1/2)^2/2 = \delta^2$. The within-group component
+is $W = 2p_1(1-p_1)/2 + 2p_2(1-p_2)/2 = 1/2 - 2\delta^2$. This implies
+that
+\begin{eqnarray*}
+  F_{ST} &=& B/(B+W)\\
+  &=& \frac{\delta^2}{\delta^2 + 1/2 - 2\delta^2}\\
+  &\approx& 2\delta^2
+\end{eqnarray*}
+where the approximation assumes that $\delta^2$ is small. $F_{ST}$
+measures the between-group variance in allele frequencies as a
+fraction of total genetic variance. Although Lewontin did not use
+$F_{ST}$, we can paraphrase his main result by saying that $F_{ST}$
+among the major human populations is small---that differences between
+these populations account for only a small fraction of human genetic
+variance. To make a point, I will assume that $F_{ST}$ is even smaller
+than the values typically estimated from human data.
+
+Given that $F_{ST}$ is small, what does this implies about group
+differences in a polygenic character controlled by these same loci? I
+assume that, at each locus, the plus allele adds one unit to character
+value, and the minus allele subtracts one unit. The environment is the
+same in both groups and therefore makes no contribution to
+between-group variance.  With this setup, each locus contributes
+$4\delta$ to the mean character value in population~1 and $-4\delta$
+to that in population~2. Each locus thus contributes $8\delta$ to $D$,
+the difference between populations and $16\delta^2$ to $V_B$, the
+between-population component of variance. Summing across loci,
+\begin{eqnarray*}
+D &=& 8K\delta\\
+V_B &=& 16 K \delta^2
+\end{eqnarray*}
+The variance here is a sum of per-locus contributions, because I have
+assumed linkage equilibrium between all pairs of loci.
+
+Environmental effects become important as we turn to the within-group
+component of variance. The heritability within each population is by
+definition $h^2 = V_G/(V_G + V_E)$, where $V_G$ and $V_E$ are the
+additive genetic and environmental components of variance. The total
+variance within groups can thus be written as $V_G + V_E = V_G
+h^{-2}$.
+
+The additive genetic variance contributed by a single locus within
+population~$i$ is $2p_i(1-p_i)\alpha^2$, where $\alpha=2$ is the
+average effect of a gene substitution \citep{Fisher:AE-11-53}. For
+either population, this equals $2(1 - 4\delta^2)$. Summing across
+loci,
+\[
+V_G = 2K(1 - 4\delta^2)
+\]
+The mean difference between the character values of the two
+populations, expressed in units of the within-population standard
+deviation, is
+\begin{eqnarray*}
+  \frac{D}{\sqrt{V_G + V_E}} &=&
+  \frac{8K\delta}{\sqrt{h^{-2}2K(1 - 4\delta^2)}}\\
+  &\approx& 5.7 h\sqrt{K}\delta
+\end{eqnarray*}
+To make this concrete, let us assume that $\delta=0.1$ so that
+$F_{ST}\approx 0.02$---a value much smaller than that of the
+continental human populations. If heritability is $h^2=0.5$, and the
+number of loci is $K=100$, then the two populations differ by 4
+standard deviations. If instead there are 1000 loci, the difference
+exceeds 12 standard deviations. This shows that small differences in
+allele frequencies can cause large population differences in the
+quantitative character they control.
+
+\citet{Lewontin:EB-6-381}
+
+\printbibliography
+
+\end{document}
+
