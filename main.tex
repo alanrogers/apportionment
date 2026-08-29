@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[letterpaper,margin=1in]{geometry}
-\usepackage{mathtools}
+\usepackage{graphicx}
 \usepackage{hyperref}
 
 \usepackage[backend=biber,
@@ -52,7 +52,7 @@
 \author{Alan R. Rogers}
 \maketitle
 
-In a celebrated paper \citet{Lewontin:EB-6-381} showed that
+In a celebrated paper, \citet{Lewontin:EB-6-381} showed that
 differences between the major human populations account for only a
 small fraction of human genetic variation. On this basis, he concluded
 that these differences are of no biological importance. This note will
@@ -69,12 +69,13 @@ underlying loci. For both reasons, Lewontin's observation does not
 imply that genetic population differences must small for human
 polygenic characters.
 
-The second of these objections reflects the fact that the difference
-between character means scales with the number, $K$, of loci, whereas
-the standard deviation scales with $\sqrt{K}$. If $K$ is large, the
-difference may amount to many standard deviations. The same idea
-underlies a well-established model of limits to selection on a
-polygenic character \citep[pp.~218--219]{Falconer:IQG-96}.
+The second of these objections reflects the fact---demonstrated
+below---that the difference between character means scales with the
+number, $K$, of loci, whereas the standard deviation scales with
+$\sqrt{K}$. If $K$ is large, the difference may amount to many
+standard deviations. The same idea underlies a well-established model
+of limits to selection on a polygenic character
+\citep[pp.~218--219]{Falconer:IQG-96}.
 
 To see how this principle applies to Lewontin's problem, consider a
 set of $K$ genetic loci, which vary within two populations of equal
@@ -85,19 +86,18 @@ in population~2, and $1/2$ in the population as a whole.  The
 between-group component of variance in allele frequencies is $B = (p_1
 - 1/2)^2/2 + (p_2 - 1/2)^2/2 = \delta^2$. The within-group component
 is $W = 2p_1(1-p_1)/2 + 2p_2(1-p_2)/2 = 1/2 - 2\delta^2$. This implies
-that
+that $F_{ST}$, which measures the between-group variance in allele
+frequencies as a fraction of total genetic variance, is equal to
 \begin{eqnarray*}
   F_{ST} &=& B/(B+W)\\
   &=& \frac{\delta^2}{\delta^2 + 1/2 - 2\delta^2}\\
   &\approx& 2\delta^2
 \end{eqnarray*}
-where the approximation assumes that $\delta^2$ is small. $F_{ST}$
-measures the between-group variance in allele frequencies as a
-fraction of total genetic variance. Although Lewontin did not use
-$F_{ST}$, we can paraphrase his main result by saying that $F_{ST}$
-among the major human populations is small. To make a point, I will
-assume that $F_{ST}$ is even smaller than the values typically
-estimated from human data.
+where the approximation assumes that $\delta^2$ is small. Although
+Lewontin did not use $F_{ST}$, we can paraphrase his main result by
+saying that $F_{ST}$ among the major human populations is small. To
+make a point, I will assume that $F_{ST}$ is even smaller than the
+values typically estimated from human data.
 
 %\[
 %  \begin{array}{ccc}
@@ -152,10 +152,18 @@ To make this concrete, let us assume that $\delta=0.1$ so that
 $F_{ST}\approx 0.02$---a value much smaller than that of the
 continental human populations. If heritability is $h^2=0.5$, and the
 number of loci is $K=100$, then the two populations differ by 4
-standard deviations. If instead there are 1000 loci, the difference
-exceeds 12 standard deviations. This shows that small differences in
-allele frequencies can cause large differences in a quantitative
-character.
+standard deviations. Fig.~\ref{fig.4sigma} shows what this would look
+like. The two distributions are well separated, with only minor
+overlap. If instead there are 1000 loci, the difference exceeds 12
+standard deviations. This shows that small differences in allele
+frequencies can cause large differences in a quantitative character.
+
+\begin{figure}
+  {\centering\includegraphics[width=0.5\textwidth]{4sigma.pdf}\\}
+  \caption{Two normal distributions with means 4 standard deviations
+    apart.}
+  \label{fig.4sigma}
+\end{figure}
 
 Lewontin expressed his conclusion as a critique of the concept of
 race. I do not, with this note, intend to revive that concept. Racial

@@ -13,4 +13,5 @@ plot(x, pdf.(dist1, x), label="μ = $μ1", lw=2, fill=(0, 0.2))
 plot!(x, pdf.(dist2, x), label="μ = $μ2", lw=2, fill=(0, 0.2))
 xlabel!("x")
 ylabel!("Density")
-title!("Normal Distributions with Means 4σ Apart)")
+
+savefig("4sigma.pdf")
