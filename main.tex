@@ -59,16 +59,18 @@ small fraction of human genetic variation. On this basis, he concluded
 that these differences are of no biological importance. This note will
 argue that this conclusion is unwarranted.
 
-There are two reasons for skepticism. First, the the loci contributing
-to a particular character may differ more between populations than
-predicted from the genome-wide average---an idea first suggested by
-Lewontin himself \citep{Lewontin+Krakauer:73} and later implemented by
-others \citep[e.g.\ ][]{Norton:MBE-24-710}. Second, the values of a
-polygenic character in two populations may differ by many standard
-deviations even if there is little between-group variance at the
-underlying loci. For both reasons, Lewontin's observation does not
-imply that genetic population differences must small for human
-polygenic characters.
+Lewontin's argument has been criticized before
+\citep{Edwards:BE-25-798}, but I will make two different
+points. First, the loci contributing to a particular character may
+differ more between populations than predicted from the genome-wide
+average---an idea first suggested by Lewontin himself
+\citep{Lewontin+Krakauer:73} and later implemented by others
+\citep[e.g.\ ][]{Norton:MBE-24-710}. Second, the values of a polygenic
+character in two populations may differ by many standard deviations
+even if there is little between-group variance at the underlying
+loci. For both reasons, Lewontin's observation does not imply that
+genetic population differences must small for human polygenic
+characters.
 
 The second of these objections reflects the fact---demonstrated
 below---that the difference between character means scales with the
@@ -83,27 +85,25 @@ set of $K$ genetic loci, which vary within two populations of equal
 size. At each locus there are two alleles, called ``plus'' and
 ``minus'' for reasons explained below. The frequency of each plus
 allele is $p_1 = 1/2 + \delta$ in population~1, $p_2 = 1/2 - \delta$
-in population~2, and $1/2$ in the population as a whole.  The
-between-group component of variance in allele frequencies is $B = (p_1
-- 1/2)^2/2 + (p_2 - 1/2)^2/2 = \delta^2$. The within-group component
-is $W = 2p_1(1-p_1)/2 + 2p_2(1-p_2)/2 = 1/2 - 2\delta^2$. This implies
-that $F_{ST}$, which measures the between-group variance in allele
-frequencies as a fraction of total genetic variance, is equal to
-\begin{eqnarray*}
-  F_{ST} &=& B/(B+W)\\
-  &=& \frac{\delta^2}{\delta^2 + 1/2 - 2\delta^2}\\
-  &\approx& 2\delta^2
-\end{eqnarray*}
-where the approximation assumes that $\delta^2$ is small. Although
-Lewontin did not use $F_{ST}$, we can paraphrase his main result by
-saying that $F_{ST}$ among the major human populations is small. To
-make a point, I will assume that $F_{ST}$ is even smaller than the
-values typically estimated from human data.
+in population~2, and $\bar p = 1/2$ in the population as a whole. Let
+us use this model to calculate Wright's $F_{ST}$, which measures the
+proportional reduction in heterozygosity caused by differences among
+populations. It is by definition $F_{ST} = B\big/\{\bar p(1-\bar p)\}$,
+where $B$ is the between-group component of variance in allele
+frequencies \citep{Wright:AE-15-323}. For our model, $B = (p_1 -
+1/2)^2/2 + (p_2 - 1/2)^2/2 = \delta^2$. This implies that
+\[
+  F_{ST} = 4\delta^2
+\]
+Although Lewontin did not use $F_{ST}$, we can paraphrase his main
+result by saying that $F_{ST}$ among the major human populations is
+small. To make a point, I will assume that $F_{ST}$ is even smaller
+than the values typically estimated from human data. 
 
 %\[
 %  \begin{array}{ccc}
 %    Gtype & Ptype & Frq\\ \hline
-%    ++ & 2 & p^2\\
+%    ++ &+2 & p^2\\
 %    +- & 0 & 2pq\\
 %    -- &-2 & q^2
 %   \end{array}
@@ -149,14 +149,15 @@ deviation, is
   \frac{8K\delta}{\sqrt{h^{-2}2K(1 - 4\delta^2)}}\\
   &\approx& 5.7 h\sqrt{K}\delta
 \end{eqnarray*}
-To make this concrete, let us assume that $\delta=0.1$ so that
-$F_{ST}\approx 0.02$---a value much smaller than that of the
-continental human populations. If heritability is $h^2=0.5$, and the
-number of loci is $K=100$, then the two populations differ by 4
-standard deviations. Fig.~\ref{fig.4sigma} shows what this would look
-like. The two distributions are well separated, with only minor
-overlap. If instead there were 1000 loci, the difference would exceed
-12 standard deviations.
+where the approximation is good if $\delta^2$ is small.  To make this
+concrete, let us assume that $\delta=0.1$ so that $F_{ST} = 0.04$---a
+value somewhat smaller than that of the continental human
+populations. If heritability is $h^2=0.5$, and the number of loci is
+$K=100$, then the two populations differ by 4 standard
+deviations. Fig.~\ref{fig.4sigma} shows what this would look like. The
+two distributions are well separated, with only minor overlap. If
+instead there were 1000 loci, the difference would exceed 12 standard
+deviations.
 
 \begin{figure}
   {\centering\includegraphics[width=0.5\textwidth]{4sigma.pdf}\\}
@@ -167,8 +168,9 @@ overlap. If instead there were 1000 loci, the difference would exceed
 
 These results show that small differences in allele frequencies can
 cause large differences in a quantitative character.  A small value of
-$F_{ST}$ does not exclude the possibility of important genetic
-differences between populations.
+$F_{ST}$ does not preclude substantial genetic differences between
+populations.
+
 
 \printbibliography
 
