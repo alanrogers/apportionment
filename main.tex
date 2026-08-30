@@ -53,52 +53,127 @@
 \author{Alan R. Rogers}
 \maketitle
 
-In a celebrated paper, \citet{Lewontin:EB-6-381} showed that
-differences between the major human populations account for only a
-small fraction of human genetic variation. On this basis, he concluded
-that these differences are of no biological importance. This note will
-argue that this conclusion is unwarranted.  Lewontin's argument can be
-criticized in several ways. First, \citet{Edwards:BE-25-798} observed
-that population differences become more informative when one considers
-the pattern of correlations among populations---a pattern that
-Lewontin ignored. Second, Lewontin himself pointed out that the loci
-contributing to a particular character may differ more between
-populations than predicted from the genome-wide average
-\citep{Lewontin+Krakauer:73}, an idea that is often used in recent
-literature \citep[e.g.\ ][]{Norton:MBE-24-710}. But my point is
-different than either of these. I will argue that the values of a
-quantitative character in two populations may differ by many standard
-deviations even if there is little between-group variance at the
-underlying loci. Consequently, Lewontin's observation does not imply
-that genetic population differences must small for human quantitative
-characters.
+% Human racial classification is of no social value and is positively
+% destructive of social and human relations. Since such racial
+% classifcation [sic] is now seen to be of virtually no genetic or
+% taxonomic significance either, no justification can be offered for
+% its continuance. (Lewontin, 1972, final paragraph)
 
-My thesis reflects the fact---demonstrated below---that the difference
-between character means scales with the number, $K$, of loci, whereas
-the standard deviation scales with $\sqrt{K}$. If $K$ is large, the
-difference may amount to many standard deviations. The same idea
-underlies a well-established model of limits to selection on a
-quantitative character \citep[pp.~218--219]{Falconer:IQG-96}.
+% Yair and Coop [18] (2023) consider the case in which stabilizing
+% selection operates with identical fitness functions in several
+% populations. Stabilizing selection prevents the means of the
+% quantitative character from diverging, so the populations retain
+% similar character means. But at each contributing locus, selection
+% favors whichever allele is common. Consequently, an allele that
+% drifts past the minimum of this marginal (1-locus) fitness function
+% is then favored by selection. This can accelerate the divergence of
+% polygenic scores for the quantitative character. Variation among
+% these scores can exceed neutral expectations.
 
-To see how this principle applies to Lewontin's problem, consider a
-set of $K$ genetic loci, which vary within two populations of equal
-size. At each locus there are two alleles, called ``plus'' and
-``minus'' for reasons explained below. The frequency of each plus
-allele is $p_1 = 1/2 + \delta$ in population~1, $p_2 = 1/2 - \delta$
-in population~2, and $\bar p = 1/2$ in the population as a whole. Let
-us use this model to calculate Wright's $F_{ST}$, which measures the
-proportional reduction in heterozygosity caused by differences among
-populations. It is by definition $F_{ST} = B\big/\{\bar p(1-\bar p)\}$,
-where $B$ is the between-group component of variance in allele
-frequencies \citep{Wright:AE-15-323}. For our model, $B = (p_1 -
-1/2)^2/2 + (p_2 - 1/2)^2/2 = \delta^2$. This implies that
+% Look at Shen and Feldman [6]
+
+% "Lewontin recognized the importance of genetic variation among
+% populations in biomedical problems; indeed, Feldman & Lewontin [43]
+% included a perspective on the value of genetic ancestry in such
+% contexts."
+
+% "Lewontin’s brief concluding interpretation is incomplete. A more
+% comprehensive view can be found by studying the 1972 paper together
+% with Lewontin’s other writings, as in Shen & Feldman [6]." p. 5
+
+% 5: "The similarity of biological-racist claims in the time of
+% Lewontin’s paper and in the present are apparent in the references
+% tabulated by Carlson & Harris [7] 
+
+% Shen and Feldman 3: "If Mitton and Edwards were merely\ldots arguing
+% that human genetic variation can be used to establish a useful
+% taxonomy, we believe that Lewontin would agree, as expressed in
+% Feldman & Lewontin [34]. However, Mitton and Edwards supported the
+% potential utility of the classical race classification, and therein
+% lies the true problem with their critique of Lewontin.''
+
+% Shen and Feldman 3: "It is true that small differences in allele
+% frequencies at large numbers of markers, with appropriate algorithms
+% [39–41], allow continental clustering [15,20,21]. For pairs of
+% populations from different clusters, genetic distance is generally
+% larger than between pairs of populations from the same clusters,
+% indicating that the history of migration is important
+% [34,42,43]. However, for Lewontin, ‘racial classification’ had a
+% totally different meaning from continental origin."
+
+% Me: Shen and Feldman presume to tell us what Lewontin meant by the
+% word "race". According to them, Lewontin's conclusion meant only
+% that one particular classification was wrong and left open the
+% possibility that other classifications might work better. If that
+% were the case, then Lewontin would presumably have embraced the more
+% recent classifications produced from molecular data. But Lewontin
+% never did that, although he lived long enough to. Neither have Shen
+% or Feldman. This suggests that Lewontin, Shen, and Feldman were not
+% making a narrow claim about one particular classification of humans
+% into races. They were making the broad claim that no classification
+% of humans is possible. This is manifestly untrue, and Edwards was
+% therefore correct in calling Lewontin's conclusion false.
+
+% Shen and Feldman 5: "Analyses of genetic and phenotypic
+% differentiation do not exclude the possibility that some traits
+% (possibly viewed as ‘essential’) exhibit a similar pattern [of large
+% between-group differences] to that of skin colour."
+
+% Shen and Feldman 5: Lewontin [4, 6] is a critique of heritability
+
+It has been known since the early 1970s that differences between
+continental human populations account for only a small fraction of
+total genetic variation \citep{Lewontin:EB-6-381, Nei:S-177-434}.  On
+this basis, Richard Lewontin concluded that racial classification was
+``of virtually no genetic or taxonomic significance''
+\citep[p.~397]{Lewontin:EB-6-381}. In the half-century since these
+papers appeared, this interpretation has been criticized
+\citep{Spielman:AJH-28-317, Mitton:AN-111-203, Edwards:BE-25-798} and
+defended \citep{Shen:PRS-377-20200417}. It is also sometimes broadened
+into a stronger claim: that when the between-group component of
+genetic variation is a small fraction of the total, there is no
+important genetic difference between the groups. This must be true in
+the limiting case when there are no genetic group differences at
+all. But what if these differences are merely small but not zero? How
+much does this constrain group differences in, say, a quantitative
+character?
+
+One answer to this question was suggested by Lewontin himself, who
+pointed out that the loci contributing to a particular character may
+differ more between populations than predicted from the genome-wide
+average \citep{Lewontin+Krakauer:73}, an idea that is often used in
+recent literature \citep[e.g.\ ][]{Norton:MBE-24-710}. This note will
+ask a different question, which focuses on the loci contributing to
+the character. If these loci vary only slightly among groups, how much
+does this constrain group differences in the character they control?
+
+I will show that this constraint is minimal if the number of loci is
+large. This reflects the fact---demonstrated below---that the
+difference between character means scales with $K$, the number of
+loci, whereas the within-group standard deviation of character value
+scales with $\sqrt{K}$. If $K$ is large, the difference between groups
+may amount to many standard deviations. The same idea underlies a
+well-established model of limits to selection on a quantitative
+character \citep[pp.~218--219]{Falconer:IQG-96}.
+
+To model this idea, let us consider a set of $K$ genetic loci, which
+vary within two populations of equal size. At each locus there are two
+alleles, called ``plus'' and ``minus'' for reasons explained
+below. The frequency of each plus allele is $p_1 = 1/2 + \delta$ in
+population~1, $p_2 = 1/2 - \delta$ in population~2, and $\bar p = 1/2$
+in the population as a whole. Let us use this model to calculate
+Wright's $F_{ST}$, which measures the proportional reduction in
+heterozygosity caused by differences among populations. It is by
+definition $F_{ST} = B\big/\{\bar p(1-\bar p)\}$, where $B$ is the
+between-group component of variance in allele frequencies
+\citep{Wright:AE-15-323}. For our model, $B = (p_1 - 1/2)^2/2 + (p_2 -
+1/2)^2/2 = \delta^2$. This implies that
 \[
   F_{ST} = 4\delta^2
 \]
-Although Lewontin did not use $F_{ST}$, we can paraphrase his main
-result by saying that $F_{ST}$ among the major human populations is
-small. To make a point, I will assume that $F_{ST}$ is even smaller
-than the values typically estimated from human data. 
+Our question now becomes, if $F_{ST}$ is small for a set of loci, how
+much does this constraint the difference between groups in a
+quantitative character controlled by these loci?
 
 %\[
 %  \begin{array}{ccc}
@@ -110,29 +185,27 @@ than the values typically estimated from human data.
 %  \]
 %Mean: $2(p^2-q^2) = 2(p+q)(p-q) = 2\times 2\delta = 4\delta$  
 
-Given that $F_{ST}$ is small, what does this imply about group
-differences in a quantitative character controlled by these same loci?
-I assume that, at each locus, the plus allele adds one unit to
-character value, and the minus allele subtracts one unit. The
-environment is the same in both groups and therefore makes no
-contribution to the difference between groups.  With this setup, each locus
-contributes $4\delta$ to the mean character value in population~1 and
-$-4\delta$ to that in population~2. Each locus thus contributes
-$8\delta$ to the difference between populations. Summing across loci,
+I assume that at each locus the plus allele adds one unit to character
+value, and the minus allele subtracts one unit. The environment is the
+same in both groups and therefore makes no contribution to the
+difference between groups.  With this setup, each locus contributes
+$4\delta$ to the mean character value in population~1 and $-4\delta$
+to that in population~2. Each locus thus contributes $8\delta$ to the
+difference between populations. Summing across loci,
 \[
 D = 8K\delta
 \]
 is the difference in mean character value between the populations.
 
-Environmental effects become important as we consider variance within
-groups. Heritability within each population is by definition $h^2 =
-V_G/(V_G + V_E)$, where $V_G$ and $V_E$ are the additive genetic and
-environmental components of variance. The total variance within groups
-can thus be written as $V_G + V_E = V_G h^{-2}$.  The additive genetic
-variance contributed by a single locus within population~$i$ is
-$2p_i(1-p_i)\alpha^2$, where $\alpha=2$ is the average effect of a
-gene substitution \citep{Fisher:AE-11-53}. For either population, this
-equals $2(1 - 4\delta^2)$. Summing across loci,
+We turn now to variance within groups. Heritability within each
+population is by definition $h^2 = V_G/(V_G + V_E)$, where $V_G$ and
+$V_E$ are the additive genetic and environmental components of
+variance. The total variance within groups can thus be written as $V_G
++ V_E = V_G h^{-2}$.  The additive genetic variance contributed by a
+single locus within population~$i$ is $2p_i(1-p_i)\alpha^2$, where
+$\alpha=2$ is the average effect of a gene substitution
+\citep{Fisher:AE-11-53}. For either population, this equals $2(1 -
+4\delta^2)$. Summing across loci,
 \[
 V_G = 2K(1 - 4\delta^2)
 \]
@@ -172,8 +245,8 @@ populations.
 
 \section*{Acknowledgements}
 
-I'm grateful for comments from Elizabeth Cashdan.
-
+I'm grateful for comments from Elizabeth Cashdan and Md. Touhidal
+Islam.
 
 \printbibliography
 
