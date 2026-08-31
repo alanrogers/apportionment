@@ -158,24 +158,23 @@ may amount to many standard deviations. The same idea underlies a
 well-established model of limits to selection on a quantitative
 character \citep[pp.~218--219]{Falconer:IQG-96}.
 
-To model this idea, let us consider a set of $K$ genetic loci, which
-vary within two populations of equal size. At each locus there are two
-alleles, called ``plus'' and ``minus'' for reasons explained
-below. The frequency of each plus allele is $p_1 = 1/2 + \delta$ in
-population~1, $p_2 = 1/2 - \delta$ in population~2, and $\bar p = 1/2$
-in the population as a whole. Let us use this model to calculate
+The model will involve $K$ genetic loci in two populations of equal
+size. Each locus has two alleles called ``plus'' and ``minus'' for
+reasons explained below. The frequency of each plus allele is $p_1 =
+1/2 + \delta$ in population~1, $p_2 = 1/2 - \delta$ in population~2,
+and $\bar p = 1/2$ in the population as a whole. The between-group
+component of variance in allele frequencies $B = (p_1 - 1/2)^2/2 +
+(p_2 - 1/2)^2/2 = \delta^2$. Let us use this model to calculate
 Wright's $F_{ST}$, which measures the proportional reduction in
-heterozygosity caused by differences among populations. It is by
-definition $F_{ST} = B\big/\{\bar p(1-\bar p)\}$, where $B$ is the
-between-group component of variance in allele frequencies
-\citep{Wright:AE-15-323}. For our model, $B = (p_1 - 1/2)^2/2 + (p_2 -
-1/2)^2/2 = \delta^2$. This implies that
+heterozygosity caused by differences among populations. It is defined
+as $F_{ST} = B\big/\{\bar p(1-\bar p)\}$ \citep{Wright:AE-15-323},
+which reduces under our model to
 \[
-  F_{ST} = 4\delta^2
+F_{ST} = 4\delta^2
 \]
-Our question now becomes, if $F_{ST}$ is small for a set of loci, how
+The question now becomes, if $F_{ST}$ is small for a set of loci, how
 much does this constrain the difference between groups in a
-quantitative character controlled by these loci?
+quantitative character they control?
 
 %\[
 %  \begin{array}{ccc}
@@ -187,27 +186,26 @@ quantitative character controlled by these loci?
 %  \]
 %Mean: $2(p^2-q^2) = 2(p+q)(p-q) = 2\times 2\delta = 4\delta$  
 
-I assume that at each locus the plus allele adds one unit to character
-value, and the minus allele subtracts one unit. The environment is the
-same in both groups and therefore makes no contribution to the
-difference between groups.  With this setup, each locus contributes
-$4\delta$ to the mean character value in population~1 and $-4\delta$
-to that in population~2. Each locus thus contributes $8\delta$ to the
-difference between populations. Summing across loci,
+I assume that each copy of the plus allele adds one unit to character
+value, and each minus subtracts one unit. The environment is the same
+in both groups and therefore makes no contribution to the difference
+between groups.  With this setup, each locus contributes $4\delta$ to
+the mean character value in population~1, $-4\delta$ to that in
+population~2, and $8\delta$ to the difference between
+populations. Summing across loci,
 \[
 D = 8K\delta
 \]
 is the difference in mean character value between the populations.
 
-We turn now to variance within groups. Heritability within each
-population is by definition $h^2 = V_G/(V_G + V_E)$, where $V_G$ and
-$V_E$ are the additive genetic and environmental components of
-variance. The total variance within groups can thus be written as $V_G
-+ V_E = V_G h^{-2}$.  The additive genetic variance contributed by a
-single locus within population~$i$ is $2p_i(1-p_i)\alpha^2$, where
-$\alpha=2$ is the average effect of a gene substitution
-\citep{Fisher:AE-11-53}. For either population, this equals $2(1 -
-4\delta^2)$. Summing across loci,
+Within each group, heritability is by definition $h^2 = V_G/(V_G +
+V_E)$, where $V_G$ and $V_E$ are the additive genetic and
+environmental components of variance. The total variance within groups
+can thus be written as $V_G + V_E = V_G h^{-2}$.  The additive genetic
+variance contributed by a single locus within population~$i$ is
+$2p_i(1-p_i)\alpha^2$, where $\alpha=2$ is the average effect of a
+gene substitution \citep{Fisher:AE-11-53}. For either population, this
+equals $2(1 - 4\delta^2)$. Summing across loci,
 \[
 V_G = 2K(1 - 4\delta^2)
 \]
@@ -241,9 +239,8 @@ deviations.
 \end{figure}
 
 These results show that small differences in allele frequencies can
-cause large differences in a quantitative character.  A small value of
-$F_{ST}$ does not preclude substantial genetic differences between
-populations.
+cause large differences in a quantitative character.  Small $F_{ST}$
+does not preclude substantial genetic differences between populations.
 
 \section*{Acknowledgements}
 
