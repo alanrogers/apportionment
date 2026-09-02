@@ -194,22 +194,22 @@ quantitative character they control?
 %\[
 %  \begin{array}{ccc}
 %    Gtype & Ptype & Frq\\ \hline
-%    ++ &+2 & p^2\\
-%    +- & 0 & 2pq\\
-%    -- &-2 & q^2
+%    ++ & 2 & p^2\\
+%    +- & 1 & 2pq\\
+%    -- & 0 & q^2
 %   \end{array}
 %  \]
-%Mean: $2(p^2-q^2) = 2(p+q)(p-q) = 2\times 2\delta = 4\delta$  
+%Mean: $2p = 1+2\delta in one pop, 1 - 2\delta in other
 
 I assume that each copy of the plus allele adds one unit to character
-value, and each minus subtracts one unit. The environment is the same
-in both groups and therefore makes no contribution to the difference
-between groups.  With this setup, each locus contributes $4\delta$ to
-the mean character value in population~1, $-4\delta$ to that in
-population~2, and $8\delta$ to the difference between
-populations. Summing across loci,
+value, and each minus adds zero. The environment is the same in both
+groups and therefore makes no contribution to the difference between
+groups.  With this setup, each locus contributes $1+2\delta$ to the mean
+character value in population~1, $1-2\delta$ to that in population~2,
+and $4\delta$ to the difference between populations. Summing across
+loci,
 \[
-D = 8K\delta
+D = 4K\delta
 \]
 is the difference in mean character value between the populations.
 
@@ -218,11 +218,12 @@ V_E)$, where $V_G$ and $V_E$ are the additive genetic and
 environmental components of variance. The total variance within groups
 can thus be written as $V_G + V_E = V_G h^{-2}$.  The additive genetic
 variance contributed by a single locus within population~$i$ is
-$2p_i(1-p_i)\alpha^2$, where $\alpha=2$ is the average effect of a
-gene substitution \citep{Fisher:AE-11-53}. For either population, this
-equals $2(1 - 4\delta^2)$. Summing across loci,
+$2p_i(1-p_i)\alpha^2$, where $\alpha$ is the average effect of a gene
+substitution \citep{Fisher:AE-11-53} and equals 1 for this model. For
+either population, this equals $(1 - 4\delta^2)/2$. Summing across
+loci,
 \[
-V_G = 2K(1 - 4\delta^2)
+V_G = K(1 - 4\delta^2)/2
 \]
 The variance here is a sum of per-locus contributions, because I have
 assumed linkage equilibrium within each population between all pairs
@@ -233,7 +234,7 @@ populations, expressed in units of the within-population standard
 deviation, is
 \begin{eqnarray*}
   \frac{D}{\sqrt{V_G + V_E}} &=&
-  \frac{8K\delta}{\sqrt{h^{-2}2K(1 - 4\delta^2)}}\\
+  \frac{4K\delta}{\sqrt{h^{-2}K(1 - 4\delta^2)/2}}\\
   &\approx& 5.7 h\sqrt{K}\delta
 \end{eqnarray*}
 where the approximation is good if $\delta^2$ is small.  To make this
