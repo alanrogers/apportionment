@@ -30,6 +30,7 @@
      \usebibmacro{date+extradate}}
     {}%
 }
+\renewcommand*{\multicitedelim}{\addsemicolon\space}
 
 \addbibresource{defs.bib}
 \addbibresource{arrpubs.bib}
@@ -133,16 +134,64 @@
 % between the means of 40 and a common standard deviation of less than
 % 4.6, there is virtually no overlap between the distributions."
 
+% Appiah:CI-12-21: "The criterion Du Bois actually uses amounts to
+% this: people are members of the same race if they share features in
+% virtue of being descended largely from people of the same region."
+
+% Appiah:CI-12-21, p.~37, footnote 10, commenting on Nei and
+% Roychoudhury Genetic Relationship and Evolution of Human Races,"
+% Evolutionary Biology 14 (1983): 11.: "I would dispute their claim
+% that their work shows the existence of a biological basis for the
+% classification of human races; what it shows is that human
+% populations differ in their distributions of genes. That is a
+% biological fact. The objection to using this fact as a basis of a
+% system of classification is that far too many people don't fit into
+% just one category that can be so defined."
+
+% Roseman:BE-43-2100204, p3: Roseman's concern seems to be not that
+% evolutionary psychologists are comparing one race to another, but
+% rather that their race categories are incorrect--that they differ
+% from those implied by genetic data. "Suppose we apply our racial
+% model (Figure 1C,D) to our final scenario (Figure 1E,F) as some
+% evolutionary psychologists advocate. We would be ignoring key
+% components of the correlations in evolutionary outcomes, such as the
+% substantial correlation between group B and groups C and
+% D. Likewise, we would be inserting a positive correlation between A
+% and B where none indeed exists. The mistake is further compounded by
+% the fact that gene flow and different rates of evolution by drift
+% are important causes of the correlation structure of human
+% variation.[3,4,7] This is intentional ignorance of the correlation
+% structure of the data, which is Lewontin’s fallacy."
+
+% Roseman:BE-43-2100204, p4: "Contrary to Edwards’ claims, Lewontin
+% did consider the correlation structure that was apparent in the data
+% as his estimates of among race variation depend on nonzero
+% correlations among evolutionary outcomes at the racial level." He
+% says this because Lewontin's data (had they been an analysis of
+% variance instead of entropy) can be used to calculate the intraclass
+% correlation of individuals within subdivisions. But Edwards was
+% talking about the correlation among loci (between-group LD), not the
+% correlation among individuals.
+
+% Shen and Feldman assert that when Lewontin spoke of "races", he did
+% not mean "continental human populations". But here is what Lewontin
+% himself said: "only 7 percent of all human genetic variation lies on
+% the average between major human races such as those of Africa, Asia,
+% Europe, and Oceania." This quote is from Pearce et al (doi:
+% 10.1136/bmj.328.7447.1070) who were quoting from Lewontin (1991)
+% "Biology as Ideology: The Doctrine of DNA."
+
 It has been known since the early 1970s that differences between
 continental human populations account for only a small fraction of
-total genetic variation \citep{Lewontin:EB-6-381, Nei:S-177-434}.  On
-this basis, Richard Lewontin concluded that ``It is clear that our
-perception of relatively large differences between human races and
-subgroups, as compared to the variation within these groups, is indeed
-a biased perception and that, based on randomly chosen genetic
-differences, human races and populations are remarkably similar to
-each other'' \citep[p.~397]{Lewontin:EB-6-381}. In the half-century
-since these papers appeared, this interpretation has been criticized
+total genetic variation \citep{Lewontin:EB-6-381, Nei:S-177-434,
+  Nei:AJH-26-421}.  On this basis, Richard Lewontin concluded that
+``It is clear that our perception of relatively large differences
+between human races and subgroups, as compared to the variation within
+these groups, is indeed a biased perception and that, based on
+randomly chosen genetic differences, human races and populations are
+remarkably similar to each other''
+\citep[p.~397]{Lewontin:EB-6-381}. In the half-century since these
+papers appeared, this interpretation has been criticized
 \citep{Spielman:AJH-28-317, Mitton:AN-111-203, Edwards:BE-25-798} and
 defended \citep{Roseman:BE-43-2100204, Shen:PRS-377-20200417,
   Hochman:RRG-22}. It is also sometimes broadened into a stronger
@@ -155,14 +204,15 @@ quantitative character?
 
 One answer to this question was suggested by Lewontin himself, who
 pointed out that the loci contributing to a particular character may
-differ more between populations than predicted from the genome-wide
-average \citep{Lewontin+Krakauer:73}, an idea that has often been used
-to look for evidence of selection
+differ more between populations than the average locus does
+\citep{Lewontin+Krakauer:73}, an idea that has often been used to look
+for evidence of selection
 \parencites[e.g.{}][]{Rogers+Harpending:QuantitativeCharacters}
-{Norton:MBE-24-710}. This note will provide an additional answer,
-which focuses on the loci contributing to the character. If
-\emph{these} loci vary only slightly among groups, how much does this
-constrain group differences in the character they control?
+           {Norton:MBE-24-710}. This note will provide an additional
+           answer, which focuses on the loci contributing to the
+           character. If \emph{these} loci vary only slightly among
+           groups, how much does this constrain group differences in
+           the character they control?
 
 I will show that this constraint is weak if the number of loci is
 large. This reflects the fact---demonstrated below---that the
@@ -237,15 +287,20 @@ deviation, is
   \frac{4K\delta}{\sqrt{h^{-2}K(1 - 4\delta^2)/2}}\\
   &\approx& 5.7 h\sqrt{K}\delta
 \end{eqnarray*}
-where the approximation is good if $\delta^2$ is small.  To make this
-concrete, let us assume that $\delta=0.1$ so that $F_{ST} = 0.04$---a
-value somewhat smaller than that of the continental human
-populations. If heritability is $h^2=0.5$, and the number of loci is
-$K=100$, then the two populations differ by 4 standard
-deviations. Fig.~\ref{fig.4sigma} shows what this would look like. The
-two distributions are well separated, with only minor overlap. If
-instead there were 1000 loci, the difference would exceed 12 standard
-deviations.
+where the approximation is good if $\delta^2$ is small. Similar
+expressions have been derived before
+\parencites[p.~799]{Edwards:BE-25-798}[before Eqn.~5]{Edge:SHP-52-32},
+but those authors were concerned with classification rather than with
+how $F_{ST}$ constrains quantitative characters.
+
+To make this result concrete, let us assume that $\delta=0.1$ so that
+$F_{ST} = 0.04$---a value somewhat smaller than that of the
+continental human populations. If heritability is $h^2=0.5$, and the
+number of loci is $K=100$, then the two populations differ by 4
+standard deviations. Fig.~\ref{fig.4sigma} shows what this would look
+like. The two distributions are well separated, with only minor
+overlap. If instead there were 1000 loci, the difference would exceed
+12 standard deviations.
 
 \begin{figure}
   {\centering\includegraphics[width=0.5\textwidth]{4sigma.pdf}\\}
@@ -259,18 +314,18 @@ quantitative character is proportional to $F_{ST}$
 \citep{Rogers+Harpending:QuantitativeCharacters}, and many studies
 have compared observed variation to this neutral expectation. It
 usually turns out that quantitative characters vary more than a
-neutral model would predict, suggesting a role for natural selection
-or environmental heterogeneity \citep{Leinonen:JEB-21-1}.  The present
-results show that this excess may be very large, even in the absence
-of environmental effects.  Small differences in allele frequencies can
-cause large differences in a quantitative character.  Large group
-differences in a quantitative character do not require large allele
-frequency differences at underlying loci.
+neutral model would predict, suggesting either natural selection or
+environmental heterogeneity \citep{Leinonen:JEB-21-1}.  The present
+results show that the genetic component of this excess may be very
+large.  Small differences in allele frequencies can cause large
+differences in a quantitative character.  Large group differences in a
+quantitative character do not require large allele frequency
+differences at underlying loci.
 
 \section*{Acknowledgements}
 
-I'm grateful for comments from Elizabeth Cashdan and Md Touhidul
-Islam.
+I'm grateful for comments from Elizabeth Cashdan, Michael D.\ Edge,
+and Md Touhidul Islam.
 
 \printbibliography
 
