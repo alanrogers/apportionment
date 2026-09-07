@@ -181,6 +181,13 @@
 % 10.1136/bmj.328.7447.1070) who were quoting from Lewontin (1991)
 % "Biology as Ideology: The Doctrine of DNA."
 
+% VanArsdale:ARA-48-227, p 228: "variation within populations exceeds
+% the variation that serves to distinguish between groups of
+% populations, discrediting the significance of the latter."
+
+% VanArsdale:ARA-48-227, p 230: "Small differences do not presuppose
+% insignificant differences."
+
 It has been known since the early 1970s that at the average genetic
 locus, variation among continental human populations is much smallar
 than variation within them \citep{Lewontin:EB-6-381, Nei:S-177-434,
@@ -203,21 +210,18 @@ pointed out that the loci contributing to a particular character may
 differ more between populations than the average locus does
 \citep{Lewontin+Krakauer:73}, an idea that has often been used to look
 for evidence of selection
-\parencites[e.g.{}][]{Rogers+Harpending:QuantitativeCharacters}
-           {Norton:MBE-24-710}. This note will provide an additional
-           answer, which focuses on the loci contributing to the
-           character. If \emph{these} loci vary only slightly among
-           groups, how much does this constrain group differences in
-           the character they control?
+\parencites[e.g.{}][]{Rogers+Harpending:QuantitativeCharacters}{Norton:MBE-24-710}.
+This note will provide an additional answer, which focuses on the loci
+contributing to the character. If \emph{these} loci vary only slightly
+among groups, how much does this constrain group differences in the
+character they control?
 
 I will show that this constraint is weak if the number of loci is
 large. This reflects the fact---demonstrated below---that the
 difference between character means scales with $K$, the number of
 loci, whereas the within-group standard deviation of character value
 scales with $\sqrt{K}$. If $K$ is large, the difference between groups
-may amount to many standard deviations. The same idea underlies a
-well-established model of limits to selection on a quantitative
-character \citep[pp.~218--219]{Falconer:IQG-96}.
+may amount to many standard deviations.
 
 The present model will involve $K$ genetic loci in two populations of
 equal size. Each locus has two alleles called ``plus'' and ``minus''
@@ -230,9 +234,10 @@ Wright's $F_{ST}$, which measures the proportional reduction in
 heterozygosity caused by differences among populations. By definition,
 $F_{ST} = B\big/\{\bar p(1-\bar p)\}$ \citep{Wright:AE-15-323}, which
 reduces under our model to
-\[
-F_{ST} = 4\delta^2
-\]
+\begin{equation}
+  F_{ST} = 4\delta^2
+  \label{eq.Fst}
+\end{equation}
 The question now becomes, if $F_{ST}$ is small for a set of loci, how
 much does this constrain the difference between groups in a
 quantitative character they control?
@@ -253,11 +258,10 @@ groups and therefore makes no contribution to the difference between
 groups.  With this setup, each locus contributes $1+2\delta$ to the mean
 character value in population~1, $1-2\delta$ to that in population~2,
 and $4\delta$ to the difference between populations. Summing across
-loci,
+loci, the difference in mean character value is
 \[
 D = 4K\delta
 \]
-is the difference in mean character value between the populations.
 
 Within each group, heritability is by definition $h^2 = V_G/(V_G +
 V_E)$, where $V_G$ and $V_E$ are the additive genetic and
@@ -278,25 +282,28 @@ of loci.
 The mean difference between the character values of the two
 populations, expressed in units of the within-population standard
 deviation, is
-\begin{eqnarray*}
+\begin{eqnarray}
   \frac{D}{\sqrt{V_G + V_E}} &=&
-  \frac{4K\delta}{\sqrt{h^{-2}K(1 - 4\delta^2)/2}}\\
+  \frac{4K\delta}{\sqrt{h^{-2}K(1 - 4\delta^2)/2}}\nonumber\\
   &\approx& 5.7 h\sqrt{K}\delta
-\end{eqnarray*}
-where the approximation is good if $\delta^2$ is small. Similar
-expressions have been derived before
-\parencites[p.~799]{Edwards:BE-25-798}[before Eqn.~5]{Edge:SHP-52-32},
-but those authors were concerned with classification rather than with
-how $F_{ST}$ constrains quantitative characters.
+  \label{eq.reldiff}
+\end{eqnarray}
+where the approximation is good if $\delta^2$ is small. To interpret
+this result, note that the right side is proportional to $\delta$,
+which is itself proportional fo $\sqrt{F_{ST}}$
+(Eqn.~\ref{eq.Fst}). This shows that $F_{ST}$ does constrain the
+difference between groups, as intuition would suggest. Yet if the
+number of loci is large, this constraint is weak.
 
-To make this result concrete, let us assume that $\delta=0.1$ so that
-$F_{ST} = 0.04$---a value somewhat smaller than that of the
-continental human populations. If heritability is $h^2=0.5$, and the
-number of loci is $K=100$, then the two populations differ by 4
-standard deviations. Fig.~\ref{fig.4sigma} shows what this would look
-like. The two distributions are well separated, with only minor
-overlap. If instead there were 1000 loci, the difference would exceed
-12 standard deviations.
+For example, suppose that $\delta=0.1$ so that $F_{ST} = 0.04$---a
+value somewhat smaller than that of the continental human
+populations. If heritability is $h^2=0.5$, and the number of loci is
+$K=100$, then the two populations differ by 4 standard
+deviations. Fig.~\ref{fig.4sigma} shows what this would look like. The
+two distributions are well separated, with only minor overlap. If
+instead there were 1000 loci, the difference would exceed 12 standard
+deviations. Thus, group differences can be much larger than the
+standard deviation, provided that $K$ is large.
 
 \begin{figure}
   {\centering\includegraphics[width=0.5\textwidth]{4sigma.pdf}\\}
@@ -304,6 +311,18 @@ overlap. If instead there were 1000 loci, the difference would exceed
     apart.}
   \label{fig.4sigma}
 \end{figure}
+
+This reflects the fact, mentioned above, that group differences scale
+with $K$, whereas the within-group standard deviation scales with
+$\sqrt{K}$. The same principle also operates in other contexts.  It is
+why selection can move the mean of a quantitative character well
+beyond the range of variation in the original population. It is also
+why multilocus methods are better at classifying individuals into
+groups than Lewontin's analysis \citep{Lewontin:EB-6-381} seemed to
+suggest.  In both of these contexts, the theory leads to results that
+are similar to my Eqn.~\ref{eq.reldiff}
+\parencites[pp.~218--219]{Falconer:IQG-96}[p.~799]{Edwards:BE-25-798}[above
+  Eqn.~5]{Edge:SHP-52-32}.
 
 Under neutral evolution, the expected variance among groups in a
 quantitative character is proportional to $F_{ST}$
