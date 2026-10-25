@@ -50,8 +50,8 @@
 \setcounter{dbltopnumber}{2}
 \setcounter{secnumdepth}{0}
 \begin{document}
-\title{Large Genetic Differences between Groups in Spite of Small
-  Average Differences in Allele Frequencies}
+\title{Large Genetic Group Differences in Spite of Small Differences
+  in Allele Frequencies}
 \author{Alan R. Rogers}
 \maketitle
 
@@ -67,92 +67,32 @@ view has provoked debate \citep{Spielman:AJH-28-317,
 widely interpreted to mean that when two populations have similar
 allele frequencies, there can be no important genetic difference
 between them. This note will not address the issue of race. Instead,
-it will dispute the underlying claim about genetic differences among
-populations. It will show first that in many species, selection has
-produced large group differences at a small fraction of the genome,
-yet in the rest of the genome, the groups hardly differ. Second, it
-will show that genetic group differences in a quantitative character
-may be large in spite of small differences in the underlying allele
-frequencies. Each of these facts undercuts the view that small group
-differences at an average locus preclude any significant genetic
-difference between the groups.
-
-Selection can increase group differences at some loci without
-increasing them at others, an idea that is often used to look for
-evidence of selection
-{\parencites{Lewontin+Krakauer:73}{Rogers+Harpending:QuantitativeCharacters}
-  {Norton:MBE-24-710}}.  For example, \citet{Akey:GR-12-1805}
-estimated $F_{ST}$, a measure of genetic group differentiation, at
-over 26,000 human loci. At the average locus, global $F_{ST}$ equaled
-0.12, a value similar to those that underlie the frequent claim that
-there can be no significant differences between human populations. But
-there was extensive variation among loci. At some, $F_{ST}$ was 0; at
-others, it was in excess of 0.4. Furthermore, loci with large $F_{ST}$
-clustered along chromosomes more strongly than predicted by a model
-involving neutral evolution and genetic linkage. After exploring
-several hypotheses, the authors concluded that ``adaptive hitchhiking
-and/or background selection'' were the most parsimonious explanation
-for this clustering \citep[p.~1807]{Akey:GR-12-1805}. Genes involved
-with immune function were overrepresented among loci with low
-$F_{ST}$, whereas enzymes and transporters were overrepresented among
-those with high $F_{ST}$ \citep[p.~1809]{Akey:GR-12-1805}. This
-suggests that selection has prevented populations from diverging in
-some characters but has accelerated divergence at others.
-
-The same phenomenon---of low $F_{ST}$ throughout most of the genome,
-interrupted by islands of extreme values---also occurs in other
-species. Wild populations of the mosquito \emph{Anopheles gambiae}
-comprise two forms, which are at least partially reproductively
-isolated. Among wild-caught gravid females, 98.8\% were found to have
-mated with males of their own form. \citet{Turner:PLO-3-e285} found
-that throughout most of the genome, there was no significant genetic
-difference between the two forms. Yet there were a few small ``islands
-of differentiation'' in which differences were large. Several
-hypotheses have been proposed. Hypothesis~A holds that the two forms
-are in the process of sympatric speciation. Gene flow prevents
-differentiation across most of the genome, yet selection maintains
-differences at a few loci, which are responsible for reproductive
-isolation. Two other hypothesis hold that the two species are already
-isolated, because the few hybrid individuals observed do not succeed
-in reproducing. The two forms are similar across most of the genome
-because they separated only recently and have not yet had time to
-drift apart. The islands of divergence exist either because drift is
-accelerated in these regions by background selection
-\citep{Charlesworth:GRC-63-213} (hypothesis~B) or because of adaptive
-evolution acting independently in the two forms
-\citep{Cruickshank:ME-23-3133} (hypothesis~C).  The same question is
-debated in various other species, where a similar pattern is observed
-\citep{Nosil:PRS-279-5058}.
-
-Under hypothesis~C, we should expect islands of differentiation to be
-most pronounced if the two daughter populations are large. This is
-because in isolated populations, large size reduces the rate at which
-$F_{ST}$ increases for neutral loci \citep[Eqn.~13.9]{Wright:TGF-69-II}
-but increases the rate of adaptive evolution
-\parencites[p.~112]{Kimura:H-24-101}[Eqn.~3.27]{Gillespie:PGC-04}.
-To see this effect, let us turn now to selection experiments involving
-microorganisms, where populations number in the billions.
+it will ask a basic question. If groups have similar allele
+frequencies, how does this constrain genetic group differences in a
+quantitative character?
 
 One answer to this question was suggested by Lewontin himself, who
 pointed out that the loci contributing to a particular character may
 differ more between populations than the average locus does
+\citep{Lewontin+Krakauer:73}, an idea that has often been used to look
+for evidence of selection
+\parencites[e.g.{}][]{Rogers+Harpending:QuantitativeCharacters}{Norton:MBE-24-710}. In
+many species (including humans) group differences are large in a few
+genomic regions in spite of low differentiation across most of the
+genome \citep{Akey:GR-12-1805, Turner:PLO-3-e285,
+  Cruickshank:ME-23-3133, Nosil:PRS-279-5058}. The difference between
+groups could clearly be large for a quantitative character controlled
+by these differentiated regions. But what of characters controlled by
+other genomic regions, in which the groups have similar allele
+frequencies?
 
-This note will provide an additional answer, which focuses on the loci
-contributing to the character. If \emph{these} loci vary only slightly
-among groups, how much does this constrain group differences in the
-character they control?
-
-\section{How much do group differences in allele frequencies constrain
-  those in a quantitative character?}
-
-This section will show that genetic group differences in a
-quantitative character may be large even if the groups hardly differ
-in the underlying allele frequencies. This reflects the
-fact---demonstrated below---that the difference between character
-means scales with $K$, the number of loci, whereas the within-group
-standard deviation of character value scales with $\sqrt{K}$. If $K$
-is large, the difference between groups may amount to many standard
-deviations.
+This note will show that group differences in a quantitative character
+may be large even if differences are small at the loci that affect the
+character. This reflects the fact---demonstrated below---that the
+difference between character means scales with $K$, the number of
+loci, whereas the within-group standard deviation scales with
+$\sqrt{K}$. If $K$ is large, the difference between groups may amount
+to many standard deviations.
 
 The model involves $K$ genetic loci in two populations of equal
 size. Each locus has two alleles called ``plus'' and ``minus.'' The
@@ -186,7 +126,7 @@ quantitative character they control?
 I assume that each copy of the plus allele adds one unit to character
 value, and each minus adds zero. The environment is the same in both
 groups and therefore makes no contribution to the difference between
-groups.  With this setup, each locus contributes $1+2\delta$ to the mean
+them.  With this setup, each locus contributes $1+2\delta$ to the mean
 character value in population~1, $1-2\delta$ to that in population~2,
 and $4\delta$ to the difference between populations. Summing across
 loci, the difference in mean character value is
@@ -206,7 +146,7 @@ loci,
 \[
 V_G = K(1 - 4\delta^2)/2
 \]
-The variance here is a sum of per-locus contributions, because I have
+The variance here is a sum of per-locus contributions because I have
 assumed linkage equilibrium within each population between all pairs
 of loci.
 
@@ -270,7 +210,7 @@ differences at underlying loci.
 \section*{Acknowledgements}
 
 I'm grateful for comments from Elizabeth Cashdan, Michael D.\ Edge,
-and Md Touhidul Islam.
+Md Touhidul Islam, and Timothy Webster.
 
 \printbibliography
 
